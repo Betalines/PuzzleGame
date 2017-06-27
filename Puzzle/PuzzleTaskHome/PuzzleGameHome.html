@@ -1,0 +1,126 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body>
+
+	
+	
+
+	<div>    
+		<h4>Hamster game - cz.1</h4>
+		<ul>
+			<li><a href="PuzzleGameLab.exe" target="_blank">Wzór programu</a></li> 
+			<li>Etap 1 (4 pkt): 
+				<ul>
+					<li>Należy zmienić tytuł okna</li>
+					<li>Pozycja startowa: środek ekranu</li>
+					<li>Okno zawiera 16 przycisków (4 rzędy, 4 kolumny) oraz etykietę dla każdego rzędu i każdej kolumny.</li>
+					<li>Początkowo każdy przycisk ma biały kolor, a każda etykieta ma wartość 0. </li>
+					<li>Czcionka użyta w etykietach ma rozmiar 14</li>
+					<li>Wciśnięcie przysisku lewym przysiskiem myszy zmienia jego kolor na czarny, wciśniecie prawym przyciskiem na biały. </li>
+					<li>Gdy kursor znajduje się nad białym przyciskiem, zmienia on kolor na żółty. Kolor powinien zmieniać się natychmiast po najechaniu na przycisk. Czarne przyciski nie reagują na najechanie kursorem</li>
+				</ul>
+			</li>
+			<li>Etap 2 (4pkt):
+				<ul>
+					<li>Etykiety powinny znajdować się w komórkach o stałym rozmiarze 50px x 50px. Rozmiary przycisków powinny się skalować odpowiednio do rozmiaru okna</li>
+					<li>Etykiety powinny znajdować się na środku swoich komórek</li>
+					<li>Należy dodać menu w górnej części okna, a w nim pole "New game"</li>
+					<li>Po naciśnięciu "New game" są losowane wartości etykiet z przedziału [0,4]. Kolory wszystkich przycisków zmieniają się na biały. Przed wciśnięciem "New game" przyciski nie reagują na kliknięcia myszy.</li>
+					<li>W każdym rzędzie i w każdej kolumnie może znajdować się tylko tyle czarnych przycisków, ile wskazuje etykieta przy tej kolumnie/rzędzie.</li>
+					<li>Jeśli użytkownik będzie chciał dodać kolejny czarny przycisk w momencie, gdy kolumna lub wiersz są już "pełne" powinien pojawić się MessageBox informujący, że tej czynności nie można wykonać.</li>
+					<li>Przed zamknięciem aplikacji powinien pojawiać się MessageBox z pytaniem czy użytkownik na pewno chce ją opuścić. Wciśnięcie "Tak" powoduje zamknięcie aplikacji, wciśnięcie "Nie" powoduje powrót do aplikacji</li>
+				</ul>
+			</li>
+			<li>Wskazówki do zadania: 
+				<ul>
+					<li>MouseDown, MouseEnter, MouseLeave</li>
+					<li>Control.Dock Fill, Control.Anchor None</li>
+					<li>TableLayoutPanel</li>
+					<li>TableLayoutPanel.GetPositionFromControl</li>
+					<li>FormClosing</li>
+					<li>DialogResult</li>
+				</ul>
+			</li>
+			<li><b>Uwaga: nie ma możliwości zdobycia punktów za niepełne funkcjonalności</b></li>
+			<li><b>Uwaga: kwestie nierostrzygnięte w opisie należy wzorować na działaniu podanej aplikacji</b></li>
+		</ul>
+		</ul>
+	
+	
+		<h4>Hamster game - cz.2 (domowa)</h4>
+		<ul>
+			<li><a href="PuzzleGameHome.exe" target="_blank">Wzór programu</a></li> 
+			<li>Opis zadania: 
+				<ul>
+					<li>Menu:
+						<ul>
+							<li>Należy dodać następujące przyciski: Settings, Open, Save oraz Mode.</li>
+							<li>Przycisk "Settings" otwiera nowe okno - "Okno ustawień"</li>
+							<li>Po wciśnięciu "Mode" rozwija się menu z opcjami "Game oraz  "Edit". Kliknięcie na nie powoduje przejście w tryb gry lub w tryb edycji. Powinien wyświetlać się checkbox pokazujący, która opcja została ostatnio kliknięta (domyślnie "Game").</li>
+							<li>Przycisk "Save" w jest aktywny tylko w trybie edycji, a przyciski "New game", "Settings" i"Open" tylko w trybie gry.</li>
+						</ul>
+					</li>
+					<li>Rozgrywka:
+						<ul>
+							<li>Domyśly wygląd przycisków: kolor: RoyalBlue, text: "?", czcionka 16.</li>
+							<li>Po wciśnięciu "New game" losujemy, które z przycisków będą przyciskami aktywnymi. Etykiety mają wskazywać ile jest przycisków aktywnych w danym wierszu lub w danej kolumnie. Wraz z rozpoczęciem gry odliczany jest czas (początkowo 10s).</li>
+							<li>Lewy przycisk myszy: po naciśnięciu przycisku aktywnego jego kolor zmienia się na czarny i do wyniku doliczane jest 50pkt; po naciśnięciu przycisku nieaktywnego tracimy jedno życie, a przycisk zmienia kolor na czerwony na 500ms.</li>
+							<li>Prawy przycisk myszy: zmienia kolor przycisku na biały. UWAGA: jeśli przycisk jest czarny, PPM nie robi nic.</li>
+							<li>Gra kończy się po upłynięciu czasu lub gdy liczba żyć będzie równa 0. Po zakończeniu gry pojawia się MessageBox z informacją o zdobytych punktach.</li>
+							<li>Celem gry jest poprawne odkrycie wszystkich przycisków aktywnych. Jeśli cel się powiedzie, od razu jest generowana nowa mapa. Liczba żyć jest przywracana na domyślną oraz czas jest mierzony od początku. Do obecnego wyniku należy dodać 500 pkt.</li>
+							<li>Na dole okna znajduje się pasek, na którym wyświetlany jest wynik, liczba żyć oraz jest wizualizowany upływ czasu.</li>
+						</ul>
+					</li>
+					<li>Okno ustawień:
+						<ul>
+							<li>Kontrolka do zmiany liczby żyć.</li>
+							<li>Kontrolka do zmieniania czasu na rundę (w sekundach)</li>
+							<li>Przycisk OK - po wciśnięciu zmiany są zapamiętywane. Reaguje na klawisz ENTER</li>
+							<li>Przycisk Cancel - po wciśnieciu zmiany są ignorowane. Reaguje na klawisz ESC</li>
+							<li>Okno ma stały rozmiar</li>
+							<li>Okno nie posiada przycisków do minimalizacji oraz maksymalizacji</li>
+							<li>Okno nie wyświetla się na pasku zadań (na pasku zawsze powinna być tylko jedna ikonka)</li>
+							<li>Gdy okno ustawień jest na ekranie, okno główne gry nie reaguje na kliknięcia</li>
+							<li>Zmiany powinny być zapamiętywane (np. przy drugim wywołaniu okna, powinny wyświetlić się 
+							wartości wpisane w pierwszym wywołaniu).</li>
+						</ul>
+					</li>
+					<li>Tryb edycji:
+						<ul>
+							<li>Tryb edycji pozwala na tworzenie własnej planszy.</li>
+							<li>Po przejściu do trybu edycji kolor menu zmienia się na złoty, a wszystkie przyciski stają się białe. </li>
+							<li>LPM działa standardowo (zmienia kolor przycisków na czarny).</li>
+							<li>PPM zmienia kolor przycisków na biały (działa też dla przycisków czarnych).</li>
+							<li>Gdy w trybie edycji zmienimy tryb na tryb gry, od razu uruchamia nam się nowa gra. Jako pierwsza plansza jest wybierana ta, którą stworzyliśmy w trybie edycji.</li>
+						</ul>
+					</li>
+					<li>Zapisywanie i wczytywanie plansz:
+						<ul>
+							<li>Zapisywanie: plansze tworzone w trybie edycji można zapisywać do pliku. Plik ma być wybierany za pomocą okna dialogowego, a jego format to *.pg</li>
+							<li>W trybie gry można wczytać planszę z pliku. Po wczytaniu od razu jest uruchamiania gra na tej planszy.</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>Wskazówki do zadania: 
+				<ul>
+					<li>System.Windows.Forms.DialogResult</li>
+					<li>NumericUpDown</li>
+					<li>AcceptButton, CancelButton</li>
+					<li>StatusStrip, StatusLabel, ProgressBar</li>
+				</ul>
+			</li>
+			<li>Punktacja:
+				<ul>
+					<li><i>Uwaga: zachowanie funkcjonalności z części 1 jest warunkiem koniecznym do oceny 2 części zadania</i></li>
+					<li>"New game" (razem z uaktualnianiem etykiet) - 1 pkt</li>
+					<li>Tryb edycji - 2 pkt</li>
+					<li>Okno ustawień - 2 pkt</li>
+					<li>Obsługa LPM i PPM w trybie gry (razem w podświetlaniem przycisku na czerwono) - 3 pkt</li>
+					<li>Uaktualnianie paska wyniku oraz wizualizacja odliczania czasu - 1 pkt</li>
+					<li>Poprawne zachowanie po ukończeniu jednej planszy (generowanie nowej, aktualizacja żyć i czasu) - 1 pkt.
+					<li>Zapisywanie i wczytywanie plansz - 2 pkt</li> 
+				</ul>
+			</li>
+			<li><b>Uwaga: kwestie nierostrzygnięte w opisie należy wzorować na działaniu podanej aplikacji</b></li>
+		</ul>
+</div></body></html>
